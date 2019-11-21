@@ -2,12 +2,16 @@ const express = require('express');
 
 const app = express();
 
-// Send status from server side
+// Send get methods from server, depending status
 
 app.get('/', (req, res) => {
     res.status(200)
     //.send('Hello from the server side!');
     .json({message: 'Hello from the server side!', app:'Natours' });
+});
+
+app.post('/', (req, res) => {
+    res.send('You can post to endpoint...');
 });
 
 // Listening port

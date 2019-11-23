@@ -3,6 +3,9 @@ const express = require('express');
 
 const app = express();
 
+//middleware
+app.use(express.json());
+
 // Send get methods from server, depending status
 
 // app.get('/', (req, res) => {
@@ -28,6 +31,12 @@ app.get('/api/v1/tours', (req, res) => {
     }
   });
 });
+
+app.post('/api/v1/tours', (req, res) => {
+    console.log(req.body);
+    res.send('Done');
+    
+})
 
 // Listening port
 const port = 3000;

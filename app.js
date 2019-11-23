@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 //middleware
-app.use(express.json());
+//app.use(express.json());
 
 // Send get methods from server, depending status
 

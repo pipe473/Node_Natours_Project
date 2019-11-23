@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 
 const app = express();
@@ -14,8 +15,12 @@ const app = express();
 //     res.send('You can post to endpoint...');
 // });
 
+const tours = JSON.parse(
+    fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
+    );
+
 app.get('/api/v1/tours', (req, res) => {
-    
+
 })
 
 // Listening port

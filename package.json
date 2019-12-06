@@ -25,5 +25,8 @@
   "devDependencies": {
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0"
+  },
+  "engines": {
+    "node":">=10.0.0"
   }
 }
